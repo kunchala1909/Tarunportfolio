@@ -1,77 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kuncha Sai Kumar | DevOps Engineer</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuncha Sai Kumar | DevOps Portfolio</title>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(120deg, #0f172a, #020617);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      animation: fadeDown 1.5s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #38bdf8;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: black;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 80px 15%;
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(56,189,248,0.15);
+      margin-bottom: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: gray;
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <h1>Kuncha Sai Kumar</h1>
-  <p>DevOps & Cloud Enthusiast | AWS | Kubernetes | Terraform</p>
-  <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+  <p>DevOps Engineer | AWS | Kubernetes | CI/CD</p>
+  <a href="resume.pdf" class="btn">Download Resume</a>
 </header>
 
-<section id="about">
+<section data-aos="fade-up">
   <h2>About Me</h2>
-  <p>
-    I am a DevOps & Cloud Enthusiast aiming to build scalable, automated, and reliable
-    cloud infrastructure using AWS, Jenkins, Docker, Kubernetes, Terraform, and Ansible.
-  </p>
+  <div class="card">
+    I am a DevOps & Cloud enthusiast passionate about automation, scalability, and cloud infrastructure using AWS, Docker, Kubernetes, Terraform, and Jenkins.
+  </div>
 </section>
 
-<section id="skills">
-  <h2>Technical Skills</h2>
-  <ul>
-    <li><b>DevOps:</b> Jenkins, Git, GitHub, ArgoCD, SonarQube</li>
-    <li><b>Cloud:</b> AWS (EC2, S3, VPC, IAM, RDS, EKS), Azure, GCP</li>
-    <li><b>Containers:</b> Docker, Kubernetes, Helm</li>
-    <li><b>IaC:</b> Terraform, Ansible</li>
-    <li><b>Monitoring:</b> Prometheus, Grafana, CloudWatch</li>
-    <li><b>OS:</b> Linux (Ubuntu, RHEL), Shell Scripting</li>
-  </ul>
+<section data-aos="fade-right">
+  <h2>Skills</h2>
+  <div class="card">AWS | Azure | GCP</div>
+  <div class="card">Docker | Kubernetes | Helm</div>
+  <div class="card">Jenkins | Git | GitHub | ArgoCD</div>
+  <div class="card">Terraform | Ansible | Linux</div>
 </section>
 
-<section id="projects">
+<section data-aos="zoom-in">
   <h2>Projects</h2>
-
-  <h3>CI/CD Pipeline for E-commerce Application</h3>
-  <p>
-    Designed CI/CD pipeline using Jenkins, Terraform, AWS, Ansible with monitoring
-    using Prometheus & Grafana.
-  </p>
-
-  <h3>Kubernetes-based Microservices Deployment</h3>
-  <p>
-    Built EKS cluster using Terraform and implemented GitOps using Helm & ArgoCD.
-  </p>
+  <div class="card">
+    <b>CI/CD Pipeline</b><br>
+    Jenkins pipeline integrated with Docker, Terraform & AWS
+  </div>
+  <div class="card">
+    <b>Kubernetes Deployment</b><br>
+    EKS cluster using Terraform with GitOps (ArgoCD)
+  </div>
 </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-
-  <p><b>Schneider Electric</b> – Intern (4 Months)</p>
-  <ul>
-    <li>Improved quality processes and reduced scrap by 15%</li>
-  </ul>
-
-  <p><b>Maridi Bio Industries</b> – Intern (6 Months)</p>
-  <ul>
-    <li>Optimized equipment performance and workflows</li>
-  </ul>
-</section>
-
-<section id="contact">
+<section data-aos="fade-left">
   <h2>Contact</h2>
-  <p>📞 8790097194</p>
-  <p>📧 kunchalasaikumar1909@gmail.com</p>
-  <p>🔗 <a href="https://linkedin.com/in/tarun-sai-kumar1909" target="_blank">LinkedIn Profile</a></p>
+  <div class="card">📧 kunchalasaikumar1909@gmail.com</div>
+  <div class="card">📞 8790097194</div>
+  <div class="card">🔗 LinkedIn Profile</div>
 </section>
 
 <footer>
-  <p>© 2025 Kuncha Sai Kumar | DevOps Portfolio</p>
+  © 2025 Kuncha Sai Kumar | Animated DevOps Portfolio
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1200, once: true });
+</script>
 
 </body>
 </html>
+
